@@ -1,0 +1,20 @@
+<div class="container">
+    <input type="text" ng-model="searchInput" placeholder="Search Here" width="50%" class="form-control" style="width:50%" />
+
+    <div class="panel panel-primary">
+        <div class="panel-heading text-center">Update User</div>
+        <div class="panel-body">
+            <div ng-repeat="user in users | filter:searchInput" class="row" style="border-bottom: 1px solid #d7e0e2;">
+                <div class="col-md-3">
+                    <section>Name: {{' ' + user.firstName + ' ' + user.lastName }}</section>
+                    <section>UserName : {{user.username}}</section>
+                </div>
+
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-small" ng-click="deleteUser(user)">Delete</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

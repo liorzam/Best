@@ -1,0 +1,10 @@
+<div class="panel panel-primary">
+    <div class="panel-heading text-center">Our Customers</div>
+    <div class="panel-body">
+        <div ng-repeat="cust in costumers" class="row">
+            <div class="col-md-2"><img src="{{cust.img}}"/></div>
+            <div class="col-md-5" class="eader"><h3>{{cust.name}}</h3></div>
+            <div class="col-md-9">{{cust.about}}</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="jumbotron" style="padding-bottom: 5px; padding-top: 5px;">
+        <div class="panel-body">
+
+            <div class="col-md-5" ng-repeat="mesg in relevantMessage.message">
+                <h4>{{mesg}}</h4>
+            </div>
+
+            <img ng-repeat="img in msg.image" ng-src="{{img.source}}" />
+        </div>
+    </div>
+</div>
+</div>
+

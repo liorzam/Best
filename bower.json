@@ -1,0 +1,20 @@
+{
+  "name": "BestOffer",
+  "version": "0.0.0",
+  "authors": [
+    "Lior Zamir"
+  ],
+  "description": "\"\"",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "toastr": "*",
+    "angular": "~1.2.9",
+    "angular-resource": "~1.2.0",
+    "angular-route": "~1.2.0",
+    "bootstrap": "~3.0.2",
+    "ngAutocomplete": "~1.0.0",
+    "angular-bootstrap-datepicker": "~0.3.1"
+  }
+}

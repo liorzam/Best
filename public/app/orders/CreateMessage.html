@@ -1,0 +1,112 @@
+<div class="container">
+    <div class="jumbotron" style="padding-bottom: 5px; padding-top: 5px;">
+        <aside>please fill out all the fields :)</aside>
+        <h2>Create a message</h2>
+    </div>
+    <!--canvas id="myCanvas" width="300" height="105"></canvas>
+                        <script>
+                            var canvas = document.getElementById('myCanvas');
+                            var context = canvas.getContext('2d');
+                            var imageObj = new Image();
+                            imageObj.onload = function() {
+                            var pattern = context.createPattern(imageObj, 'repeat');
+                            context.rect(0, 0, canvas.width, canvas.height);
+                            context.fillStyle = pattern;
+                            context.fill();
+                            };
+                            imageObj.src = '/Application/public/vendor/app/img/collage.jpg';
+                            </script-->
+
+    <div class="container">
+        <div class="well">
+            <form name="newMessage" class="form-horizontal">
+                <fieldset>
+                    <legend>New Message Information</legend>
+                    <section>
+                        <div class="form-group">
+                            <label for="template" class="col-md-2 control-label">Choose a new Template</label>
+                            <div class="col-md-10">
+                                <select data-ng-model="slectedTemplate" data-ng-options="template.id for template in templates" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="screen" class="col-md-2 control-label">Screen to show</label>
+                            <div style="float:left; display:inline-block;">
+                                <div ng-repeat="screen in screens" class="col-md-10">
+                                    <input type="checkbox" value="{{screen.number}}" ng-checked="slectedscreans.indexOf({{screen.number}}) > -1" ng-click="toggleScreenSelection(screen.number)" />{{screen.number}}
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <div class="form-group">
+                            <label for="message" class="col-md-2 control-label">The Message</label>
+                            <div class="col-md-10">
+
+                                <div ng-repeat="(k,v) in slectedTemplate.numberOfMessages track by $index" style="float:left">
+                                    <input type="text" placeholder="Your Message" ng-model="slectedTemplate.messages[k]" class="form-control" />
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="fname" class="col-md-2 control-label">Date</label>
+                            <div class="col-md-2">
+                                Start Date:
+                                <input type="text" calendar ng-options="datepickerOptions" ng-model="dateStart">
+
+                            </div>
+
+                            <div class="col-md-2">
+                                End Date:
+                                <input type="text" calendar ng-options="datepickerOptions" ng-model="dateEnd">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Days" class="col-md-1 control-label">Days</label>
+                            <div style="float:left; display:inline-block;">
+                                <div ng-repeat="day in days" class="col-md-10">
+                                    <input type="checkbox" value="{{day.day}}" ng-checked="slectedDays.indexOf({{day.day}}) > -1" ng-click="toggleDaysSelection($index, day)" />{{day.day}}
+                                    <div ng-show="days[$index].checked">
+                                        <label for="time" class="col-md-2 control-label">Date</label>
+                                        <div class="col-md-2">
+                                            Start by hour:
+                                            <input type="text" ng-model="days[$index].hours.from">
+
+                                        </div>
+
+                                        <div class="col-md-2">
+                                            End by hour:
+                                            <input type="text" ng-model="days[$index].hours.to">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lname" class="col-md-1 control-label">Image:</label>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <div ng-repeat="image in pics" class="col-md-10">
+                                <input type="checkbox" value="{{image.model}}" ng-click="togglePicsSelection(image)" />
+                                <img ng-src="{{image.source}}" height="50px" width="50px" />
+                            </div>
+                        </div>
+                    </section>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10 col-md-offset-2">
+                <div class="pull-right">
+                    <button ng-click="submitNewMessage()" ng-disabled="newMessage.$invalid" class="btn btn-primary">Finish</button>&nbsp;<a href="/" class="btn btn-default">Cancel</a>
+                </div>
+            </div>
+        </div>
+        </fieldset>
+        </form>
+    </div>
+</div>
+</div>
+

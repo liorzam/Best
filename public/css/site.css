@@ -1,0 +1,81 @@
+body {
+    padding-top: 69px;
+}
+aside {
+    font-size: larger;
+    font-style: italic;
+    color: #528B8B;
+    float: right;
+    width: 35%;
+    padding-left: 5px;
+}
+@font-face
+{
+    font-family: myFirstFont;
+    src: url('sansation_light.woff') format('woff'), url('sansation_light.ttf') format('truetype');
+}
+.font-face {
+    font-family: 'myFirstFont', fantasy, sans-serif;
+}
+.jumbotron h1 {
+    text-shadow: 3px 3px 0 #aaa;
+}
+.transSign {
+    -webkit-transition: background-color 3s;
+    -moz-transition: background-color 3s;
+    -o-transition: background-color 3s;
+    -ms-transition: background-color 3s;
+    transition: background-color 3s;
+}
+.transSign:hover {
+    background-color: #9AC0CD;
+}
+.navbar .form-control {
+    border: 2px solid #a1a1a1;
+    padding: 10px 40px;
+    width: 240px;
+    border-radius: 25px;
+    left: 50%;
+    right: 50%;
+}
+.navbar {
+    background-color: #5F9EA0;
+}
+.navbar-nav .facebook-icon {
+    padding: 5px 10px 5px 0px;
+}
+.navbar-header a.navbar-brand {
+    margin-top: -15px;
+    margin-bottom: -20px;
+}
+.navbar-header a.navbar-brand h6 {
+    color: #ccc;
+}
+footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+footer p {
+    border-top: 1px solid #d7e0e2;
+}
+.navbar-form .form-group {
+    margin-left: 10px;
+}
+.navbar-form button {
+    margin-left: 10px;
+}
+.top-padding-med {
+    padding-top: 10px;
+}
+.margin-left-med {
+    margin-left: 10px;
+}
+.toast-top-right {
+    top: 70px;
+}
+.toast-success {
+    background-color: #13987e;
+}
+.toast-error {
+    background-color: #FF0000;
+}

@@ -1,0 +1,16 @@
+db.msg.aggregate(
+    { 
+	$group : {_id : "$template", total : { $sum : 1 }}
+    }
+  );
+
+
+
+db.msg.aggregate(
+    { 
+	$group : {_id : "screen", total : { $sum : 1 }},
+	cond : { "template" : 1}
+    }
+  );
+
+
